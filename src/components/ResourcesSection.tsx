@@ -17,12 +17,12 @@ export default function ResourcesSection() {
     };
 
     return (
-        <section id="resources" className="py-24 bg-background border-b-4 border-black">
+        <section id="resources" className="py-16 md:py-24 bg-background border-b-4 border-black">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 border-b-4 border-black pb-8">
                     <div className="max-w-4xl">
                         <span className="inline-block bg-black text-white px-3 py-1 font-bold text-xs uppercase tracking-widest border-2 border-black mb-6">{t('nav.resources')}</span>
-                        <h2 className="text-5xl md:text-7xl font-black font-heading text-foreground tracking-tight max-w-3xl">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-foreground tracking-tight max-w-3xl">
                             {t('resources.title')}
                         </h2>
                         <p className="text-xl text-secondary max-w-2xl font-sans mt-8 leading-relaxed border-l-4 border-black pl-4">

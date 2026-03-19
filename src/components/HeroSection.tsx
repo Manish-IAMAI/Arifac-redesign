@@ -27,7 +27,7 @@ export default function HeroSection() {
     ];
 
     return (
-        <section ref={targetRef} className="relative min-h-screen pt-40 pb-20 overflow-hidden bg-background border-b-4 border-black">
+        <section ref={targetRef} className="relative min-h-screen pt-32 md:pt-40 pb-16 md:pb-20 overflow-hidden bg-background border-b-4 border-black">
             {/* Minimalist Retro Grid Background */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none" />
 
@@ -51,10 +51,10 @@ export default function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-5xl md:text-7xl lg:text-8xl font-black font-heading leading-[1.05] text-foreground tracking-tight"
+                            className="text-4xl md:text-6xl lg:text-7xl font-black font-heading leading-[1.1] text-foreground tracking-tight"
                         >
                             {t('hero.title')} <br className="hidden md:block"/>
-                            <span className="text-accent underline decoration-black decoration-8 underline-offset-8">
+                            <span className="text-accent underline decoration-black decoration-[6px] underline-offset-4 lg:underline-offset-8">
                                 {t('hero.title_integrity')}
                             </span>
                             <br className="hidden md:block"/>
@@ -128,11 +128,11 @@ export default function HeroSection() {
                                     {/* Decorative Retro Stripes */}
                                     <div className="absolute top-0 right-0 w-16 h-16 bg-[repeating-linear-gradient(45deg,transparent,transparent_4px,#000_4px,#000_8px)] opacity-10 group-hover:opacity-20 transition-opacity" />
                                     
-                                    <div className="p-3 bg-accent text-white border-2 border-black shadow-[2px_2px_0_0_#000] mb-6 z-10">
-                                        <Icon className="w-8 h-8" />
+                                    <div className="p-3 bg-accent text-white border-2 border-black shadow-[2px_2px_0_0_#000] mb-4 md:mb-6 z-10">
+                                        <Icon className="w-6 h-6 md:w-8 md:h-8" />
                                     </div>
-                                    <div className="text-5xl font-black font-heading text-foreground mb-2 z-10">{stat.value}</div>
-                                    <div className="text-sm font-bold text-secondary uppercase tracking-widest border-t-2 border-black pt-4 w-full mt-2 z-10">
+                                    <div className="text-4xl md:text-5xl font-black font-heading text-foreground mb-2 z-10">{stat.value}</div>
+                                    <div className="text-xs md:text-sm font-bold text-secondary uppercase tracking-widest border-t-2 border-black pt-4 w-full mt-2 z-10">
                                         {stat.label}
                                     </div>
                                 </motion.div>

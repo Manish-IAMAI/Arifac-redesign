@@ -13,12 +13,12 @@ export default function CertificationScrollSection() {
     const [selectedLevel, setSelectedLevel] = useState<CertificationLevel | null>(null);
 
     return (
-        <section id="certification" className="py-24 bg-background border-b-4 border-black">
+        <section id="certification" className="py-16 md:py-24 bg-background border-b-4 border-black">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 border-b-4 border-black pb-8">
                     <div className="max-w-4xl">
                         <span className="inline-block bg-foreground text-background px-3 py-1 font-bold text-xs uppercase tracking-widest border-2 border-black shadow-brutal mb-6">{t('cert.level')} 1-3</span>
-                        <h2 className="text-5xl md:text-7xl font-black font-heading text-foreground tracking-tight max-w-3xl">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-foreground tracking-tight max-w-3xl">
                             {t('cert.title')} <br />
                             <span className="text-accent underline decoration-black decoration-8 underline-offset-8">{t('cert.title_framework')}</span>
                         </h2>
@@ -56,7 +56,7 @@ export default function CertificationScrollSection() {
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-3xl font-black font-heading text-foreground mb-4 leading-tight group-hover:text-accent transition-colors duration-300 z-10 relative">
+                            <h3 className="text-2xl md:text-3xl font-black font-heading text-foreground mb-4 leading-tight group-hover:text-accent transition-colors duration-300 z-10 relative">
                                 {level.title === "Foundations of AML, CFT & Sanctions" ? t('data.cert.title1') :
                                     level.title === "Intermediate Compliance & Regulatory Oversight" ? t('data.cert.title2') :
                                         level.title === "Advanced AML Strategy & Institutional Design" ? t('data.cert.title3') : level.title}

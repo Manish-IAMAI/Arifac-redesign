@@ -14,14 +14,14 @@ const previewImages = [
 
 export default function QuickGallerySection() {
     return (
-        <section className="py-24 bg-background border-b-4 border-black overflow-hidden relative">
+        <section className="py-16 md:py-24 bg-background border-b-4 border-black overflow-hidden relative">
             {/* Background geometric pattern */}
             <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 border-b-4 border-black pb-8">
                     <div className="max-w-4xl">
                         <span className="inline-block bg-accent text-white px-3 py-1 font-bold text-xs uppercase tracking-widest border-2 border-black shadow-brutal mb-6">Visual Journey</span>
-                        <h2 className="text-5xl md:text-7xl font-black font-heading text-foreground tracking-tight max-w-3xl">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-foreground tracking-tight max-w-3xl">
                             Gallery
                         </h2>
                         <p className="text-xl text-secondary max-w-2xl font-sans mt-8 leading-relaxed border-l-4 border-accent pl-4">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, User, Building2, CheckSquare } from 'lucide-react';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useSearchParams } from 'next/navigation';
 
-export default function MembershipRegistrationFormB() {
+function FormBContent() {
   const searchParams = useSearchParams();
   const prefilledOrg = searchParams.get('org') || '';
 
@@ -210,5 +210,13 @@ export default function MembershipRegistrationFormB() {
       </div>
       <Footer />
     </main>
+  );
+}
+
+export default function MembershipRegistrationFormB() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <FormBContent />
+    </Suspense>
   );
 }
